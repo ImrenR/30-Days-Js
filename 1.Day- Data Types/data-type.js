@@ -132,8 +132,10 @@ console.log(sentence1.slice(30,54))
 //**************************************************************************************/
 //? 1- 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
 // Count the number of the world love in this sentence.
-//? 2- Use match() to count the number of all because in the following sentence :
-// ' You cannot end a sentence with because because because is a conjusction'
-//? 3- Calculate the total anual income of the person by extracting the numbers
-//? from the following text. 'He earns 5000 euros from salary per month,
-//? 10000 euros anual bonus, 15000 euro online courses per month'.
+
+let abcz = 'Love is the best thing in this world. Some found their love and some are still looking for their love';
+let lowerCaseSentence = abcz.toLowerCase();
+const words = lowerCaseSentence.match(/\b\w+\b/g);
+const count = words.filter(word => word === 'love').length;
+console.log(`The word "love" appears ${count} times.`);
+
