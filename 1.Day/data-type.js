@@ -29,9 +29,50 @@ let b =7;
 
 console.log(`${a+b}`)
 
-/*Template Literals*/
+
 
 let abc = 2;
 let xyz =3 ;
 
 console.log(`${abc} is greater than ${xyz} ? : ${abc > xyz}`)
+
+//**. STRING METHODS **/
+//*************************************************************************/
+
+//! A string is a primitive data type that means we cab not modify it once it s created
+//? The string object has many string methids. There are different methods that can help us to work with strings.
+
+//1- LENGTH */
+
+ let string = 'JAVASCRIPT'
+
+ console.log(string.length)
+ console.log(string[0])
+
+ //2- IndexOf() */
+
+ console.log(string.indexOf(2)) // There no '2' element includes thats why prints as -1
+ console.log(string.indexOf('T'))
+
+ //3- toUpperCase() - toLowerCase()*/
+
+ console.log(string.toLocaleLowerCase())
+
+ //4- Substr   */
+//? substr : It takes 2 arguments, the starting index and number of characters to slice
+console.log(string.substr(5,2)) // starting index number and length 
+
+//! Substring()
+console.log(string.substring(1,4)) // substring() does not include the stopping index
+console.log(string.substring(4))
+
+
+ //5- Split () */
+
+ let country = 'Portugal'
+  
+ console.log(country.split(' '))
+
+ //6-    */
+
+ //7- */
