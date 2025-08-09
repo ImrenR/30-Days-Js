@@ -69,10 +69,17 @@ console.log(string.substring(4))
 
  //5- Split () */
 
- let country = 'Portugal'
+ let country = 'Portugal is beautiful'
   
- console.log(country.split(' '))
+ console.log(country.split(' ')) // Changes to array ['Portugal]
+console.log(country.split(', '))
 
- //6-    */
+ //6- replace ()   */
 
- //7- */
+ console.log(country.replace('Portugal', "Turkey"))
+
+ //7- endsWith()- startsWith() */
+
+ console.log(country.endsWith('ipt'))
+ console.log(country.startsWith('PORT')) // case sensetive metohd thats why returns false
+ console.log(country.startsWith('Port'))
