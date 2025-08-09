@@ -1,7 +1,29 @@
 //** EXERCISES -1 **/
 
 //***********************************************************************************/
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
 
+//** EXERCISES -2 **/
+
+//***********************************************************************************/
 //? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
 
 let number = "10"; // string
