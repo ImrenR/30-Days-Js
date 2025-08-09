@@ -50,18 +50,30 @@ console.log(number4)
 //? 6- Generate a random number between 50 - 100 inclusively
 
 let randomNumber = Math.floor(Math.random()* (100 - 50 + 1) + 50 );
+console.log(randomNumber)
 //? 7- Generate a random number between 0 - 255 inclusively
+
+let number5 = Math.floor(Math.random()*256)
+console.log(number5)
+
 //? 8- Access the 'JavaScript' string characthers using a random number
+
+ let cumle = "JavaScript";
+
+ let randomIndex = Math.floor(Math.random()*cumle.length);
+ console.log(randomIndex)
+
 //? 9- Use console.log() and escape characters to print the following pattern.
 
-// 1 1 1 1 1
-// 2 1 2 4 8
-// 3 1 3 9 27
-// 4 1 4 16 64
-// 5 1 5 25 125
+console.log('1\t1\t1\t1\t1\n' + '2\t1\t2\t4\t8\n' + '3\t1\t3\t9\t27\n' + '4\t1\t4\t16\t64\t' +
+'5\t1\t5\t25\t125\n');
 
 //? 10- USe subtr to slice out the phrace because because becuase from the following sentence
 //? 'You cannot end a sentence with because because because is a conjunction'
+
+let sentence1= 'You cannot end a sentence with because because because is a conjunction'
+
+console.log(sentence1.slice(30,54))
 
 //** EXERCISES -2 **/
 
