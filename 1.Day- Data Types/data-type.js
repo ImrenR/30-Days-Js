@@ -1,25 +1,55 @@
 //** EXERCISES -1 **/
 
 //***********************************************************************************/
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
-//? 1- Check if typeof '101 is equal to 10, if it s not make it exactly equal
+//? 1- Change all the strings characters to capital letters using toUpperCase()
+
+let cml = "ama ben yapmadim";
+console.log(cml.toUpperCase());
+
+//? 2- Change all the strings characters to lowercase 
+
+let cumle1= 'JAVASCRIPT';
+console.log(cumle1.toLocaleLowerCase());
+
+//? 3- Cut out the first word of the string using substr() or substring() method
+console.log(cumle1.substring(1,10))
+
+//? 4- Slice out the phrase 'Days of JavaScript' from '30 Days Of JavaScript'
+
+let sentence2 = '30 Days Of JavaScript';
+console.log(sentence2.length);
+console.log(sentence2.substring(3,21));
+
+//? 5- Check if the string contains a word 'Script' using includes()
+
+console.log(sentence2.includes('Script'));
+
+//? 6- Split the string into array 
+
+console.log(sentence2.split(''));
+
+//? 7- Split the string at the space using split()
+
+console.log(sentence2.split(" "))
+//? 8- 'Facebook, Google, Microsoft, Apple, IBM , Oracle, Amazon' split the string at the comma and change it to an array.
+
+let sentece5 = 'Facebook, Google, Microsoft, Apple, IBM , Oracle, Amazon';
+
+console.log(sentece5.split(" "));
+
+//? 9- Change 30 Days Of JavaScript to 30 Days Of Python using replace ()
+
+let sentece6 = '30 Days Of JavaScript';
+
+console.log(sentece6.replace('JavaScript', 'Python'));
+
+//? 10- What is the character index 15 in "30 Days Of JavaScript" string use charArt()
+
+console.log(sentece6.charAt(15)); // answer : S
+
+//? 11 - What is the character code of J in '30 Days Of JavaScript' string using chartCodeAt()
+
+console.log(sentece6.charCodeAt('J')) // asnwer 51
 
 //** EXERCISES -2 **/
 
@@ -97,7 +127,7 @@ let sentence1= 'You cannot end a sentence with because because because is a conj
 
 console.log(sentence1.slice(30,54))
 
-//** EXERCISES -2 **/
+//** EXERCISES -3 **/
 
 //**************************************************************************************/
 //? 1- 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
