@@ -126,18 +126,73 @@ a > b ? console.log('a is greater than b') : console.log('a is less than b')
 // 50-59, D
 // 0-49, F
 
+// let grade = parseInt(prompt("enter your score:"))
+
+// switch(true) {
+//   case (grade >=80 && grade <= 100 ):
+//     console.log('Grade : A');
+//     break;
+//     case (grade >=70 && grade <= 89 ):
+//     console.log('Grade : B');
+//     break;
+//     case (grade >=60 && grade <= 69 ):
+//     console.log('Grade : C');
+//     break;
+//     case (grade >=50 && grade <= 59 ):
+//     console.log('Grade : D');
+//     break;
+//     case (grade >= 0 && grade <= 49 ):
+//     console.log('Grade : F');
+//     break;
+//     default:
+//       console.log('Please enter a valid score')
+// }
+
+
 //? 2 -Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+
 // September, October or November, the season is Autumn.
 // December, January or February, the season is Winter.
 // March, April or May, the season is Spring
 // June, July or August, the season is Summer.
+//! Answer : 
+
+function getSeason(month) {
+  // Convert input to lowercase for case-insensitive matching
+  month = month.toLowerCase();
+
+  if (month === 'september' || month === 'october' || month === 'november') {
+    return 'Autumn';
+  } else if (month === 'december' || month === 'january' || month === 'february') {
+    return 'Winter';
+  } else if (month === 'march' || month === 'april' || month === 'may') {
+    return 'Spring';
+  } else if (month === 'june' || month === 'july' || month === 'august') {
+    return 'Summer';
+  } else {
+    return 'Invalid month';
+  }
+}
+
+// Example usage:
+// const userInput = prompt('Enter a month:');
+// const season = getSeason(userInput);
+// console.log(`The season is: ${season}`);
+
+
+
 
 //? 3 -Check if a day is weekend day or a working day. Your script will take day as an input.
 // What is the day  today? Saturday
 // Saturday is a weekend.
 
-// What is the day today? saturDaY
-// Saturday is a weekend.
+// const theDay = prompt ('Enter the day:').toLocaleLowerCase();
+
+// if (theDay === 'saturday' || theDay === 'sunday'){
+//   console.log(`${theDay} is a weekend`);
+// }else {
+//   console.log(`${theDay} is a working day`)
+// };
 
 // What is the day today? Friday
 // Friday is a working day.
@@ -159,5 +214,84 @@ a > b ? console.log('a is greater than b') : console.log('a is less than b')
 
 // Enter a month: FEbruary
 // February has 28 days.
+ 
+//! Answer : 
+
+function getDaysInMonth(mothInput){
+  const month = monthInput.toLowerCase();
+   const monthDays = {
+    january: 31,
+    february: 28,
+    march: 31,
+    april: 30,
+    may: 31,
+    june: 30,
+    july: 31,
+    august: 31,
+    september: 30,
+    october: 31,
+    november: 30,
+    december: 31,
+  };
+ if (monthDays.hasOwnProperty(month)) {
+    // Capitalize first letter for output
+    const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+    const days = monthDays[month];
+    console.log(`${capitalizedMonth} has ${days} day${days > 1 ? 's' : ''}.`);
+  } else {
+    console.log('Invalid month entered.');
+  }
+}
+
 
 //? 2 -Write a program which tells the number of days in a month, now consider leap year.
+
+function isLeapYear(year) {
+  // Leap year if divisible by 400 OR divisible by 4 but not by 100
+  return (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
+}
+
+function getDaysInMonth(monthInput, year) {
+  const month = monthInput.toLowerCase();
+
+  const monthDays = {
+    january: 31,
+    february: 28, // base days in February
+    march: 31,
+    april: 30,
+    may: 31,
+    june: 30,
+    july: 31,
+    august: 31,
+    september: 30,
+    october: 31,
+    november: 30,
+    december: 31,
+  };
+
+  if (!monthDays.hasOwnProperty(month)) {
+    console.log('Invalid month entered.');
+    return;
+  }
+
+  let days = monthDays[month];
+
+  // Adjust for leap year if February
+  if (month === 'february' && isLeapYear(year)) {
+    days = 29;
+  }
+
+  // Capitalize first letter
+  const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+  console.log(`${capitalizedMonth} ${year} has ${days} day${days > 1 ? 's' : ''}.`);
+}
+
+// Example usage:
+const userMonth = prompt('Enter a month:');
+const userYear = parseInt(prompt('Enter a year:'), 10);
+
+if (!isNaN(userYear)) {
+  getDaysInMonth(userMonth, userYear);
+} else {
+  console.log('Invalid year entered.');
+}
