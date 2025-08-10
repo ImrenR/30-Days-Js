@@ -159,4 +159,5 @@ a > b ? console.log('a is greater than b') : console.log('a is less than b')
 
 // Enter a month: FEbruary
 // February has 28 days.
+
 //? 2 -Write a program which tells the number of days in a month, now consider leap year.
