@@ -186,7 +186,7 @@ function getSeason(month) {
 // What is the day  today? Saturday
 // Saturday is a weekend.
 
-// const theDay = prompt ('Enter the day:').toLocaleLowerCase();
+// const theDay = prompt ('Enter the day:');
 
 // if (theDay === 'saturday' || theDay === 'sunday'){
 //   console.log(`${theDay} is a weekend`);
@@ -246,52 +246,52 @@ function getDaysInMonth(mothInput){
 
 //? 2 -Write a program which tells the number of days in a month, now consider leap year.
 
-function isLeapYear(year) {
-  // Leap year if divisible by 400 OR divisible by 4 but not by 100
-  return (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
-}
+// function isLeapYear(year) {
+//   // Leap year if divisible by 400 OR divisible by 4 but not by 100
+//   return (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
+// }
 
-function getDaysInMonth(monthInput, year) {
-  const month = monthInput.toLowerCase();
+// function getDaysInMonth(monthInput, year) {
+//   const month = monthInput.toLowerCase();
 
-  const monthDays = {
-    january: 31,
-    february: 28, // base days in February
-    march: 31,
-    april: 30,
-    may: 31,
-    june: 30,
-    july: 31,
-    august: 31,
-    september: 30,
-    october: 31,
-    november: 30,
-    december: 31,
-  };
+//   const monthDays = {
+//     january: 31,
+//     february: 28, // base days in February
+//     march: 31,
+//     april: 30,
+//     may: 31,
+//     june: 30,
+//     july: 31,
+//     august: 31,
+//     september: 30,
+//     october: 31,
+//     november: 30,
+//     december: 31,
+//   };
 
-  if (!monthDays.hasOwnProperty(month)) {
-    console.log('Invalid month entered.');
-    return;
-  }
+//   if (!monthDays.hasOwnProperty(month)) {
+//     console.log('Invalid month entered.');
+//     return;
+//   }
 
-  let days = monthDays[month];
+//   let days = monthDays[month];
 
-  // Adjust for leap year if February
-  if (month === 'february' && isLeapYear(year)) {
-    days = 29;
-  }
+//   // Adjust for leap year if February
+//   if (month === 'february' && isLeapYear(year)) {
+//     days = 29;
+//   }
 
-  // Capitalize first letter
-  const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
-  console.log(`${capitalizedMonth} ${year} has ${days} day${days > 1 ? 's' : ''}.`);
-}
+//   // Capitalize first letter
+//   const capitalizedMonth = month.charAt(0).toUpperCase() + month.slice(1);
+//   console.log(`${capitalizedMonth} ${year} has ${days} day${days > 1 ? 's' : ''}.`);
+// }
 
-// Example usage:
-const userMonth = prompt('Enter a month:');
-const userYear = parseInt(prompt('Enter a year:'), 10);
+// // Example usage:
+// const userMonth = prompt('Enter a month:');
+// const userYear = parseInt(prompt('Enter a year:'), 10);
 
-if (!isNaN(userYear)) {
-  getDaysInMonth(userMonth, userYear);
-} else {
-  console.log('Invalid year entered.');
-}
+// if (!isNaN(userYear)) {
+//   getDaysInMonth(userMonth, userYear);
+// } else {
+//   console.log('Invalid year entered.');
+// }
