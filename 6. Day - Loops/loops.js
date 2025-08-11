@@ -28,33 +28,60 @@ const mernStack = ["MongoDB", "Express", "React", "Node"];
 
 //? 1- Iterate 0 to 10 using for loop, do the same using while and do while loop
 
+for (let i = 0; i<=10; i++){
+  console.log(i)
+};
+
+let x = 0 ;
+while (x<=10){
+  console.log(x);
+  x++;
+};
+
+let j= 0;
+do {
+  console.log(j);
+  j++;
+}while(j<=10);
+
+
 //? 2- Iterate 10 to 0 using for loop, do the same using while and do while loop
 
+for(let l=10; l>=0; l--){
+  console.log(l);
+}
+
+
+let u=10;
+do{
+  console.log(u);
+  u--;
+}while(u>=0);
+
+let p=10;
+while(p>=0){
+  console.log(p);
+  p--;
+};
+
 //? 3- Iterate 0 to n using for loop
+ 
+let n = 6;
 
-//? 4- Write a loop that makes the following pattern using console.log():
+for(let m=0; m<=n; m++){
+  console.log(n)
+};
 
-//     #
-//     ##
-//     ###
-//     ####
-//     #####
-//     ######
-//     #######
-//? 5- Use loop to print the following pattern:
-// 0 x 0 = 0
-// 1 x 1 = 1
-// 2 x 2 = 4
-// 3 x 3 = 9
-// 4 x 4 = 16
-// 5 x 5 = 25
-// 6 x 6 = 36
-// 7 x 7 = 49
-// 8 x 8 = 64
-// 9 x 9 = 81
-// 10 x 10 = 100
+
 
 //? 6- Using loop print the following pattern
+
+//console.log("i\t i^2\t i^3");  // header with tabs for spacing
+
+for (let c = 0; c <= 10; c++) {
+  console.log(`${c}\t ${c ** 2}\t ${c ** 3}`);
+}
+
 //  i    i^2   i^3
 //  0    0     0
 //  1    1     1
@@ -67,26 +94,130 @@ const mernStack = ["MongoDB", "Express", "React", "Node"];
 //  8    64    512
 //  9    81    729
 //  10   100   1000
+
+
 //? 7- Use for loop to iterate from 0 to 100 and print only even numbers
+
+for (let k=0; k<=100; k++){
+  if (k%2===0){
+console.log(k);
+  }
+};
+
 
 //? 8- Use for loop to iterate from 0 to 100 and print only odd numbers
 
-//? 9- Use for loop to iterate from 0 to 100 and print only prime numbers
+for (let b=0; b<=100; b++){
+  if (b%2 !== 0){
+    console.log(b);
+  }
+};
+
+//? 9- Use for loop to iterate from 0 to 100 and print only prime numbers.
+
+for (let num = 2; num <= 100; num++) {
+  let isPrime = true;
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  if (isPrime) {
+    console.log(num);
+  }
+}
+
+
+
 //? 10- Use for loop to iterate from 0 to 100 and print the sum of all numbers.
 // The sum of all numbers from 0 to 100 is 5050.
+
+
+let sum=0
+for(let num1= 0; num1<=100; num1++){
+   sum +=num1 
+   console.log(sum);
+}
+
+
 //? 11- Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
 // Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
-//? 12- Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+ let sumEven=0;
+ let sumOdd = 0;
+
+ for(let num2=0; num2<=100; num2++){
+   
+    if (num2 % 2 === 0){
+     sumEven += num2;
+    }else {
+
+      sumOdd += num2;
+    }
+ };
+
+   console.log(sumEven);
+    console.log(sumOdd);
+
+
+
+//? 12- Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. 
+//?Print sum of evens and sum of odds as array
 
 // [2550, 2500]
 
+let evens = [];
+let odds = [];
+
+evens.push(sumEven);
+odds.push(sumOdd);
+
+let mergedBoth = [...evens,...odds];
+console.log(mergedBoth);
+
 //? 13-Develop a small script which generate array of 5 random numbers
+
+let randomNumbers = [];
+
+for (let i = 0; i < 5; i++) {
+  randomNumbers.push(Math.floor(Math.random() * 100));  // random number 0 to 99
+}
+
+console.log(randomNumbers);
+
 //? 14-Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+let uniqueNum = [];
+
+for(let v =0; v< 5; v++){
+  uniqueNum.push(Math.floor(Math.random() * 300));
+
+}
+console.log(uniqueNum);
 //? 15-Develop a small script which generate a six characters random id:
 
 // 5j2khz
 
+function generateRandomId (length = 6){
+  const chars = 'abcdefglmnopqrkhstuvwyz0123456789';
+  let id = '';
+
+  for (let i = 0; i< length; i++){
+    const randomIndex = Math.floor(Math.random()*chars.length);
+    id +=chars[randomIndex]
+  }
+  return id;
+}
+
+console.log(generateRandomId());
+
 //*******************EXERCISE- 2*********************************** */
+
+
+
 //? 1-Develop a small script which generate any number of characters random id:
 
 // fe3jo1gl124g
@@ -153,7 +284,16 @@ const mernStack = ["MongoDB", "Express", "React", "Node"];
   // MONGODB
 
 
+
+
+
+
+
 //*******************EXERCISE- 3*********************************** */
+
+
+
+
 //? 1-Copy countries array(Avoid mutation)
 //? 2- Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
 
