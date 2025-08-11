@@ -1,7 +1,5 @@
 //*******************EXERCISE- 1*********************************** */
 
-const mernStack = ["MongoDB", "Express", "React", "Node"];
-
 //? 1- Iterate 0 to 10 using for loop, do the same using while and do while loop
 //*********************************************************************** */
 
@@ -366,10 +364,10 @@ if (newArr2.length > 0) {
 
 let longestCountry = countries[0];
 
-for (let i =1; i< countries.length; i++){
-  if (countries[i].length > longestCountry.length){
-  longestCountry = countries[i];
-}
+for (let i = 1; i < countries.length; i++) {
+  if (countries[i].length > longestCountry.length) {
+    longestCountry = countries[i];
+  }
 }
 console.log(longestCountry);
 
@@ -378,11 +376,11 @@ console.log(longestCountry);
 //********************************************************************************************************************************************************************/
 // ['Japan', 'Kenya']
 
- fiveLetters = [];
+fiveLetters = [];
 
-for (let i =1; i < countries.length; i ++){
-  if(countries[i].length === 5){
-     fiveLetters.push(countries[i]);
+for (let i = 1; i < countries.length; i++) {
+  if (countries[i].length === 5) {
+    fiveLetters.push(countries[i]);
   }
 }
 console.log(fiveLetters);
@@ -390,22 +388,22 @@ console.log(fiveLetters);
 //********************************************************************************************************************************************************************/
 //? 11-Find the longest word in the webTechs array
 //********************************************************************************************************************************************************************/
- const webTechs = [
+const webTechs = [
   "HTML",
   "CSS",
   "JavaScript",
-   "React",
-   "Redux",
-   "Node",
-   "MongoDB",
- ];
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
 
 let longestIT = [0];
 
-for(let i = 1; i < webTechs.length; i++){
-   if (webTechs[i].length > longestIT.length ){
-  longestIT = webTechs[i];
-}
+for (let i = 1; i < webTechs.length; i++) {
+  if (webTechs[i].length > longestIT.length) {
+    longestIT = webTechs[i];
+  }
 }
 console.log(longestIT);
 
@@ -415,10 +413,29 @@ console.log(longestIT);
 
 // [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
 
+webArr = [];
+
+for (let i = 0; i < webTechs.length; i++) {
+  const webs = webTechs[i];
+  const lengthWeb = webTechs[i].length;
+  webArr.push([webs, lengthWeb]);
+}
+console.log(webArr);
+
 //********************************************************************************************************************************************************************/
 //? 13- An application created using MongoDB, Express, React and Node is called a MERN stack app.
 //?Create the acronym MERN by using the array mernStack
 //********************************************************************************************************************************************************************/
+
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+
+newMern = [];
+
+for (let i = 0; i < mernStack.length; i++) {
+  const firstW = mernStack[i].slice(0, 1).toUpperCase();
+  newMern.push(firstW);
+}
+console.log(newMern);
 
 //********************************************************************************************************************************************************************/
 //? 14- Iterate through the array,
@@ -426,24 +443,46 @@ console.log(longestIT);
 //?for loop or for of loop and print out the items.
 //********************************************************************************************************************************************************************/
 
+const technologies = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"];
+const newArray5 = [];
+
+for (const tech of technologies) {
+  newArray5.push(tech);
+}
+
+console.log(newArray5);
+
+
+
 //********************************************************************************************************************************************************************/
 //? 15- This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
 //********************************************************************************************************************************************************************/
+const newFruit = [];
+const fruitArr = ['banana', 'orange', 'mango', 'lemon'];
 
+for (let i = fruitArr.length -1; i >=0; i--){
+   newFruit.push(fruitArr[i]);
+}
+console.log(newFruit);
 //********************************************************************************************************************************************************************/
 //? 16- Print all the elements of array as shown below.
 //********************************************************************************************************************************************************************/
 
-// const fullStack = [
-//   ['HTML', 'CSS', 'JS', 'React'],
-//   ['Node', 'Express', 'MongoDB']
-// ]
-// HTML
-// CSS
-// JS
-// REACT
-// NODE
-// EXPRESS
-// MONGODB
+ const fullStack = [
+['HTML', 'CSS', 'JS', 'React'],
+ ['Node', 'Express', 'MongoDB']
+ ];
+
+ const combinedArray = [];
+ for (let i =0; i<fullStack.length; i++){
+  for(let j=0; j <fullStack[i].length; j++){
+    combinedArray.push(fullStack[i][j].toLocaleUpperCase());
+  }
+ };
+
+ console.log(combinedArray);
+
+
+
 
 
