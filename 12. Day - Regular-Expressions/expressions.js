@@ -16,7 +16,7 @@
 // is_valid_variable('1first_name') # False
 // is_valid_variable('firstname') # True
 
-//*****************************  Exercises: Level 1  *******************************************************/
+//*****************************  Exercises: Level 2  *******************************************************/
 
 //******************************************************************************************************** */
 
@@ -62,7 +62,7 @@ console.log(tenMostFrequentWords(paragraph, 10))
 {word:'which', count:1}
 ]
 
-//*****************************  Exercises: Level 1  *******************************************************/
+//*****************************  Exercises: Level 3 *******************************************************/
 
 //******************************************************************************************************** */
 
@@ -72,7 +72,7 @@ console.log(tenMostFrequentWords(paragraph, 10))
 //   console.log(cleanText(sentence))
 
 //  I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher
- ```
+
 //? 2- Write a function which find the most frequent words. After cleaning, count three most frequent words in the string.
 
 
