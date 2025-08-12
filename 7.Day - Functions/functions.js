@@ -6,6 +6,21 @@
 
 //? 1-Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
 
+
+ function solveLinEquation(a, b, c, x = null, y = null) {
+    if (x !== null && y === null) {
+        return (-a * x - c) / b;
+    } else if (y !== null && x === null) {
+        return (-b * y - c) / a;
+    } else {
+        throw new Error("You must provide exactly one of x or y.");
+    }
+};
+
+console.log(solveLinEquation(2, 3, -6, 1));     // Given x=1, find y
+console.log(solveLinEquation(2, 3, -6, null, 2)); // Given y=2, find x
+
+
 //? 2-Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
 
 // console.log(solveQuadratic()) // {0}
