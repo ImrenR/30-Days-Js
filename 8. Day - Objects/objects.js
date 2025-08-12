@@ -74,17 +74,57 @@ console.log(`The most skilled person is ${mostSkilledPerson} with ${maxSkills} s
 //? 2-Count logged in users, count users having greater than equal to 50 points from the following object.
 //******************************************************************************************************** */
 
+let loggedInCount = 0;
+let highPointsCount = 0;
+
+
+for (const user in users){
+  if (users[user].isLoggedIn){
+    loggedInCount++;
+  }
+  if (users[user].points >= 50){
+    highPointsCount++;
+  }
+}
+
+console.log(`logged in users: ${loggedInCount}`);
+console.log(`users with >=50 points: ${highPointsCount}`);
+
 //******************************************************************************************************** */
 //? 3-Find people who are MERN stack developer from the users object
 //******************************************************************************************************** */
+
+let mernDevelopers = 0;
+const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+
+
+for(const user in users) {
+  if (mernStack.every(skill => users[user].skills.includes(skill))){
+    mernDevelopers++;
+  }
+}
+console.log(mernDevelopers);
 
 
 //******************************************************************************************************** */
 //? 4-Set your name in the users object without modifying the original users object
 //******************************************************************************************************** */
 
+const myName = 'Imren';
 
+// Copy the users object and add a new user 
 
+const newUsers = {
+  ...users,
+  [myName]: {
+    email : 'imren@example.com',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    age: 22,
+    isLoggedIn: false,
+    points: 0
+  }
+}
+console.log(newUsers);
 //******************************************************************************************************** */
 //? 5-Get all keys or properties of users object
 //******************************************************************************************************** */
