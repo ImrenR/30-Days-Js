@@ -39,6 +39,18 @@ console.log(greater);
 //3 - Make an object representing a person with properties: name, hobbies (array), and birthYear. 
 // Add a method getAge() that calculates the age from birthYear using the current date. Call the method and print the result.
 
+const obj = {
+  name :'imren',
+  hobbies : ['Piano', ' Photography', 'Cinema'],
+  birthYear : 1991,
+  getAge : function() {
+    const today = new Date();
+    return today.getFullYear() - this.birthYear;
+  }
+};
+
+console.log(obj.getAge());
+
 
 
 //4 -Create an array of strings with mixed lengths. 
