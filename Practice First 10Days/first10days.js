@@ -56,16 +56,32 @@ console.log(obj.getAge());
 //4 -Create an array of strings with mixed lengths. 
 // Use a higher-order function to return a new array of strings that are in uppercase and have more than 4 characters.
 
+const nameS = ['Imren', 'Turkey', 'Portugal', 'Porto'];
+
+const newArr = nameS.filter(name=>name.length >4).map(name=>name.toUpperCase());
+console.log(newArr);
 
 
 //5 -Write code that generates a random number from 1–100.
 //  If the number is divisible by both 3 and 5, log "FizzBuzz". 
 // If divisible only by 3, log "Fizz". If divisible only by 5, log "Buzz". Otherwise, log the number.
 
-
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+ if (randomNumber % 3 === 0 && randomNumber%5 === 0) {
+  console.log('FizzBuzz');
+ }else if (randomNumber % 3 === 0){
+    console.log('Buzz');
+ }else if (randomNumber % 5 === 0){
+  console.log('Fizz');
+ }else {
+ console.log(randomNumber);
+ }
 
 //6 -Make a Map that stores the population of at least 3 countries. 
-// Write a function that takes a country name and returns its population or "Not Found".
+//a. Write a function that takes a country name and returns its population or "Not Found".
+//b. Create a Map with country populations
+
+
 
 
 
@@ -73,28 +89,52 @@ console.log(obj.getAge());
 //["banana", "apple", "banana", "orange", "apple", "mango"]
 //Create a function that returns a list of unique fruits sorted in alphabetical order.
 
+const fruits = ["banana", "apple", "banana", "orange", "apple", "mango"];
 
+function getUniqueSortedFruits(arr) {
+  const uniqueFruits = [...new Set(arr)];
+  
+  uniqueFruits.sort();
+  
+  return uniqueFruits;
+}
 
-
+console.log(getUniqueSortedFruits(fruits));
+// Output: ["apple", "banana", "mango", "orange"]
 
 //8 - Create a loop that runs from 1 to 20 and:
 
 // Skips multiples of 4
+for(let i =1; i<21; i++){
+  if(i%4 === 0){
+  continue;
+}console.log(i)};
 
 // Stops the loop entirely if the number is greater than 15
-
-// Logs each remaining number
-
-
-
+for(let i =1; i<20; i++){
+  if(i > 15){
+   break;
+}console.log(i)};
 
 
 
 
 //9 -Create a function that takes an array of numbers and returns an object with two properties:
 
+const arr1 = [11,23,56,67,89];
 // sum → sum of all numbers
+function sumOfNumbers (arr) {
+ const sum = arr1.reduce((total,num)=> total + num, 0);
+ const average = sum / arr.length;
+ return {sum,average};
+}
 
+console.log(sumOfNumbers(arr1));
 //average → average of the numbers
+
+
+
+
+
 
 //10 -Create an object representing a library with properties: name and books (array of book titles). Add a method findBooksByLetter(letter) that returns an array of books starting with that letter. Use .filter() inside the method.
